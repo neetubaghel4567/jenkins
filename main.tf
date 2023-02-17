@@ -2,7 +2,7 @@ resource "google_compute_instance" "default" {
   name         = "neha-vfm1"
   machine_type = "e2-small"
   project = "inavolan"
-  zone         = "us-central1-c"
+  zone         = "us-central1-a"
   tags = ["allow-firewall"]
   boot_disk {
     initialize_params {
