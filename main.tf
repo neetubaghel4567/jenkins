@@ -1,5 +1,5 @@
 resource "google_compute_instance" "default" {
-  name         = "neha-vm1"
+  name         = "neha-vfm1"
   machine_type = "e2-small"
   project = "inavolan"
   zone         = "us-central1-c"
