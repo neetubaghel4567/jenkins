@@ -1,9 +1,15 @@
+resource "google_service_account" "default" {
+  account_id   = "service_account_id"
+  display_name = "Service Account"
+}
+
 resource "google_compute_instance" "default" {
-  name         = "neha-vm1"
-  machine_type = "e2-small"
-  project = "magnetic-quasar-378605"
-  zone         = "us-central1-c"
-  tags = ["allow-firewall"]
+  name         = "test"
+  machine_type = "e2-medium"
+  zone         = "us-central1-a"
+
+  
+
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-11"
@@ -12,10 +18,21 @@ resource "google_compute_instance" "default" {
       }
     }
   }
+
+
+
   network_interface {
     network = "default"
-}
-  allow_stopping_for_update = true
 
-}
 
+  }
+
+
+
+
+  service_account {
+    # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
+    email  = google_service_account.default.email
+    scopes = ["cloud-platform"]
+  }
+}
