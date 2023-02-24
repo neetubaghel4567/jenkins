@@ -4,7 +4,7 @@ resource "google_service_account" "default" {
 }
 
 resource "google_compute_instance" "default" {
-  name         = "test"
+  name         = "testvm"
   machine_type = "e2-medium"
   zone         = "us-central1-a"
  project ="magnetic-quasar-378605"
