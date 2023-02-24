@@ -4,7 +4,7 @@ resource "google_compute_instance" "default" {
   name         = "testvm"
   machine_type = "e2-medium"
   zone         = "us-central1-a"
- project ="magnetic-quasar-378605"
+ project ="jenkins-server-project"
   
 
   boot_disk {
