@@ -2,7 +2,7 @@ resource "google_compute_instance" "default" {
   name         = "neha-vm1"
   machine_type = "e2-small"
   project = "magnetic-quasar-378605"
-  zone         = "us-central1-a"
+  zone         = "us-central1-c"
   tags = ["allow-firewall"]
   boot_disk {
     initialize_params {
