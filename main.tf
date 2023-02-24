@@ -1,7 +1,7 @@
 resource "google_compute_instance" "default" {
   name         = "neha-vm1"
   machine_type = "e2-small"
-  project = "Jenkins-server-project"
+  project = "jenkins-server-project"
   zone         = "us-central1-a"
   tags = ["allow-firewall"]
   boot_disk {
