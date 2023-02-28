@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Git checkout') {
            steps{
-                git branch: 'main', credentialsId: 'Github', url: 'https://github.com/nehapatel345/jenkins'
+                git branch: 'main', url: 'https://github.com/nehapatel345/jenkins'
             }
         }
         stage('terraform format check') {
