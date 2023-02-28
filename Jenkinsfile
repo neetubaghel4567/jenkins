@@ -5,7 +5,7 @@ pipeline {
     }
  
   environment {
-        CLOUDSDK_CORE_PROJECT='inavolan' 
+        CLOUDSDK_CORE_PROJECT='jenkins-server-project' 
     }
  
     stages {
