@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment{
-        CLOUDSDK_CORE_PROJECT = 'o-media-2'
+        CLOUDSDK_CORE_PROJECT = 'jenkins-server-project'
     }
 
     stages{
