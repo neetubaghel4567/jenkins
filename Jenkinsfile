@@ -6,12 +6,17 @@ pipeline {
     }
   
   stages {
+    stage('auth') {
+      steps {
+          sh 'gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS'
+      }
+    }
+    stages {
     stage('Checkout') {
       steps {
         git branch: 'main', url: 'https://github.com/nehapatel345/jenkins'
       }
     }
-    
   
     
     stage('Terraform Init') {
