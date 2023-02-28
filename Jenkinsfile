@@ -3,11 +3,11 @@ pipeline {
     tools {
        terraform 'terraform'
     }
-  agent any{
+ 
   environment {
         CLOUDSDK_CORE_PROJECT='inavolan' 
     }
-  }
+ 
     stages {
         stage('Git checkout') {
            steps{
