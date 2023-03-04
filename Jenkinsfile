@@ -30,9 +30,15 @@ pipeline {
             }
           
         }
+//         stage('Approve') {
+//       steps {
+//         // Prompt the user to approve the changes
+//         input message: 'Are you sure you want to apply these changes?', ok: 'Approve'
+//       }
+//     }
          stage('Terraform Apply') {
       steps {
-        sh 'terraform apply -auto-approve'
+        sh 'terraform apply'
         // sh 'terraform apply -auto-approve tfplan'
       }
     }
