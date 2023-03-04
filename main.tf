@@ -1,5 +1,5 @@
 resource "google_compute_instance" "default" {
-  name         = "nehatestvm1"
+  name         = "nehatestvm166"
   machine_type = "e2-medium"
   zone         = "us-central1-a"
  project ="jenkins-server-project"
